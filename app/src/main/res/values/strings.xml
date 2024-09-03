@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">homepage</string>
+    <string name="top_update">Informasi perubahan data katalog</string>
+    <string name="last_update">Pembaruan terakhir :</string>
+    <string name="next_update">Pembaruan selanjutnya :</string>
+    <string name="last_update_time">16-06-2022 15:00:01</string>
+    <string name="next_update_time">17-06-2022 15:00:01</string>
+    <string name="pt">PT XYZ</string>
+    <string name="city">Sleman</string>
+    <string name="statistik">Laporan Statistik</string>
+    <string name="bookmark">Tender Tersimpan</string>
+    <string name="search">Katalog Tender</string>
+    <string name="setting">Pengaturan</string>
+
+
+</resources>

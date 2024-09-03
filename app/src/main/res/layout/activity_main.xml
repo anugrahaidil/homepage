@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nama_pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pt"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="34dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:id="@+id/icon_location"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/outline_location_on_24"
+        android:layout_below="@id/nama_pt"
+        android:layout_marginTop="8dp"
+        android:layout_alignStart="@+id/nama_pt"
+        app:tint="@color/oyen"
+        />
+
+    <TextView
+        android:id="@+id/txt_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        android:layout_alignBottom="@id/icon_location"
+        android:layout_toRightOf="@id/icon_location"
+        />
+
+    <LinearLayout
+        android:id="@+id/box_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/icon_location"
+        android:layout_marginTop="24dp"
+        android:layout_centerInParent="true"> <!-- Mengatur agar LinearLayout berada di tengah RelativeLayout -->
+
+        <RelativeLayout
+            android:layout_width="341dp"
+            android:layout_height="82dp"
+            android:background="@drawable/container_border"> <!-- Menggunakan drawable untuk border -->
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/top_update"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/abu"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/gabungan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/textView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"> <!-- Opsional: jarak antara textView1 dan LinearLayout -->
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/abu"
+                    android:text="@string/last_update"/>
+                <TextView
+                    android:id="@+id/textViewbaru2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_update_time"
+                    android:textColor="@color/oyen"
+                    android:textStyle="bold"
+                    android:layout_marginStart="2dp"/> <!-- Opsional: jarak antara textView2 dan textViewbaru2 -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gabungan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/gabungan1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"> <!-- Opsional: jarak antara textView1 dan LinearLayout -->
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/abu"
+                    android:text="@string/next_update"/>
+
+                <TextView
+                    android:id="@+id/textViewbaru3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next_update_time"
+                    android:textColor="@color/oyen"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"/> <!-- Opsional: jarak antara textView2 dan textViewbaru2 -->
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/katalog"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/shadow"
+        android:drawableTop="@drawable/baseline_manage_search_24"
+        android:text="@string/search"
+        android:layout_below="@id/box_info"
+        android:layout_alignStart="@id/box_info"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"
+    />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/katalog_simpan"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="20dp"
+        android:drawableTop="@drawable/baseline_bookmark_added_24"
+        android:text="@string/bookmark"
+        android:textAllCaps="false"
+        android:background="@drawable/shadow"
+        android:layout_toRightOf="@id/katalog"
+        android:layout_alignTop="@id/katalog"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/laporan"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/shadow"
+        android:drawableTop="@drawable/baseline_insert_chart_24"
+        android:text="@string/statistik"
+        android:textAllCaps="false"
+        android:layout_below="@id/katalog"
+        android:layout_alignStart="@id/katalog"
+        android:layout_marginTop="24dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pengaturan"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/shadow"
+        android:drawableTop="@drawable/baseline_settings_24"
+        android:text="@string/setting"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/laporan"
+        android:layout_alignTop="@id/laporan"
+        />
+
+</RelativeLayout>
